@@ -13,19 +13,19 @@
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-card-name">「南邮本科生小程序」</div>
-            <div class="project-detail">出于对技术的热爱和对设计的追求，青柚工作室成员本着为南邮学生服务的出发点，创造解决生活学习中存在的痛点的可能，开发产品，服务同学，提升技术能力。青柚，我们在创造可能。</div>
+            <div class="project-detail">轻量级移动端智慧校园解决方案。在不弃用高校现有各系统的情况下，对学生日常使用的各系统功能进行整合，并在手机上通过即走即用、无需下载的微信小程序的方式展现。</div>
           </div>
           <div class="project-card-body">
-            <img src="../assets/product-intro/logo1.png" alt="" />
+            <img src="../assets/product-intro/under-graduate.png" alt="" />
           </div>
         </div>
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-card-name">「南邮研究生小程序」</div>
-            <div class="project-detail">出于对技术的热爱和对设计的追求，青柚工作室成员本着为南邮学生服务的出发点，创造解决生活学习中存在的痛点的可能，开发产品，服务同学，提升技术能力。青柚，我们在创造可能。</div>
+            <div class="project-detail">轻量级移动端智慧校园解决方案。以南邮研究生同学服务作为出发点，创造解决南邮研究生生活学习中存在的痛点的可能，提供定制化服务。</div>
           </div>
           <div class="project-card-body">
-            <img src="../assets/product-intro/logo2.png" alt="" />
+            <img src="../assets/product-intro/graduate.png" alt="" />
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ export default {
     display: flex
     flex-direction: column
     align-items: center
-    margin-bottom: 97px
+    margin-bottom: 20px
     @media(max-width: $phone)
       width: 100%
     .part3-header
@@ -62,9 +62,12 @@ export default {
       display: flex
       justify-content: space-between
       margin-bottom: 3.5rem
+      align-items: center
+      @media(max-width: $ipad)
+        flex-direction: column
+        align-items: flex-start
       @media(max-width: $phone)
         width: 72%
-        flex-direction: column
       .part3-title-container
         position: relative 
       .title-font
@@ -77,28 +80,37 @@ export default {
       .header-image
         width: 540px
         height: 417px
+        background-size: 70%
+        background-position: center
+        background-repeat: no-repeat
+        @media(max-width: $ipad)
+          margin: auto
+          background-size: 60%
         @media(max-width: $phone)
           width: 280px
           height: 210px
-          margin: auto
-        background-image: url('../assets/Illustrations/usability_testing_2xs4.svg')
-        background-size: cover
+        background-image: url('../assets/Illustrations/xiaochenxu_1.png')
     .part3-body
       width: 100%
       display: flex
       justify-content: space-between
-      @media(max-width: $phone)
+      // @media(max-width: $phone)
+      @media(max-width: $ipad)
         align-items: center
         flex-direction: column
+        width: 100vw
+        justify-content: space-around
       .project-card
         width: 460px
         height: 345px
         border-radius: 10px
         position: relative
-        @media(min-width: $phone)
+        @media(min-width: $ipad)
           margin-right: 20px
+        @media(max-width: $ipad)
+          margin-bottom: 70px
         @media(max-width: $phone)
-          margin-bottom: 40px
+          margin-bottom: 80px
           width: 280px
           height: 210px
         &:hover
@@ -128,6 +140,8 @@ export default {
             @media(min-width: $phone)
               font-size: 24px
           .project-detail
+            text-align: justify
+            padding: 2px
             margin: auto
             line-height: 20px
             font-size: 90%
@@ -149,5 +163,8 @@ export default {
           align-items: center
           img
             margin: auto
+            width: 100%
+            height: 100%
+            border-radius: 10px
 </style>
 

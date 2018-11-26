@@ -11,13 +11,13 @@
           <div class="text">
             <div class="cube"></div>
             <br />
-            <p>官方邮箱</p>
-            <p>sast-service@njupt.edu.cn</p>
+            <p class="mail-paragragh" @click="mailToQingYou">官方邮箱</p>
+            <p class="mail-paragragh" @click="mailToQingYou">qingyou@njupt.edu.cn</p>
             <br /><br />
             <div class="cube"></div>
             <br />
-            <div><a href="" style="color:#ffffff">开源仓库</a></div>
-            <div><a href="" style="color: #ffffff">AUSTO认证</a></div>
+            <div><a href="https://github.com/GreenPomelo" style="color:#ffffff">开源仓库</a></div>
+            <div><a href="https://qingyou.njupt.edu.cn/oauth" style="color: #ffffff">Oauth认证</a></div>
           </div>
           <div class="QR-Code">
             <div>
@@ -40,7 +40,12 @@
 
 <script>
 export default {
-  name: `Footer`
+  name: `Footer`,
+  methods: {
+    mailToQingYou() {
+      window.location = "mailto:qingyou@njupt.edu.cn"
+    }
+  }
 };
 </script>
 
@@ -53,9 +58,10 @@ export default {
 *
   margin: 0
   padding: 0
-
+.mail-paragragh
+  cursor: pointer
 .animation-container
-  height: 100px
+  height: 6.25rem
   width: 100%
   position: absolute
 
@@ -76,7 +82,7 @@ export default {
   background-color: #58c796
 
 .bcg1
-  height: 35.875rem
+  height: 34.875rem
   background-color: #90dab9
   display: -webkit-box
   display: -ms-flexbox
@@ -87,7 +93,7 @@ export default {
 
 .bcg2
   width: 100vw
-  height: 31rem
+  height: 30rem
   background-color: #58c796
   position: relative
 

@@ -345,6 +345,9 @@ export default {
       margin-bottom: 3.5rem
       margin-top: 5.75rem
       position: relative
+      @media(max-width: $phone)
+        width: 82%
+        margin: 5.75rem auto 3.5rem auto
       .title-font
         font-weight: 600
         font-size: 2.5rem
@@ -386,6 +389,7 @@ export default {
         max-height: 42.75rem
         display: inline-block
         .stuff-card
+          cursor: pointer
           margin-left: 0.1rem
           float: left
           display: inline-block

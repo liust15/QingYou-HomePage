@@ -1,8 +1,8 @@
 <template>
   <div>
     <Home/>
-    <Stuff />
     <Project />
+    <Stuff />
     <Recruit />
     <OpenSource />
     <Footer />
@@ -28,9 +28,3 @@ export default {
   }
 };
 </script>
-
-<style lang="sass" scoped>
-*
-  padding: 0
-  margin: 0
-</style>
