@@ -5,15 +5,20 @@
       <div class="title-bubble bubble2"></div>
       <span class="title-text">我们的开源</span>
     </div>
-    <div class="image-container">
-        <img src="../assets/open-source/qingyougit.png" alt="">
+    <div class="image-container" @click="navToGithubRepository">
+      <img src="../assets/open-source/qingyougit.png" alt="">
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: `OpenSource`
+  name: `OpenSource`,
+  methods: {
+    navToGithubRepository() {
+      window.location.href = `https://github.com/GreenPomelo`;
+    }
+  }
 };
 </script>
 
@@ -41,7 +46,7 @@ export default {
   .image-container
     width: 72%
     margin-top: 4rem
-    height: 13rem
+    cursor: pointer
     img
       width: 100%
       border: solid 1px rgba(151,151,151,0.2)

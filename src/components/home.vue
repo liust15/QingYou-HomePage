@@ -2,21 +2,28 @@
   <div class="part1-container">
     <div class="top">
       <div class="studio-icon"><img src="../assets/logo/qingyoulogo.svg" /></div>
-      <button>Oauth认证</button>
+      <button @click="navToOauth">Oauth认证</button>
     </div>
     <div class="part1">
       <div class="introduction">
-        <div class="introduction-img"></div>
         <div class="introduction-text">
-          <h1>『青柚』<br />创造可能</h1>
+          <h1>用爱发电<br />创造可能</h1>
           <br />
           <p>
             青柚工作室成立于2017年10月，现已有超过30位成员分别负责技术、设计、运营推广等工作。截止到现在，青柚工作室已经开发“南京邮电大学”、
             “校谈”等微信小程序。其中，“南邮小程序”现已有超过3.9万用户，日均活跃量超过8千人次。
-            <br />出于对技术的热爱和对设计的追求，青柚工作室成员本着为南邮学生服务的出发点，创造解决生活学习中存在痛点的可能，开发产品，服务同学，提升技术能力。青柚，我们在创造可能。
           </p>
+          <p>出于对技术的热爱和对设计的追求，青柚工作室成员本着为南邮学生服务的出发点，创造解决生活学习中存在痛点的可能，开发产品，服务同学，提升技术能力。青柚，我们在创造可能。</p>
         </div>
       </div>
+    </div>
+    <div class="plane-container">
+      <div class="plane-first" :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"></div>
+      <div class="plane-second" :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"></div>
+      <div class="plane-third" :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"></div>
+      <div class="plane-first-opposite" :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"></div>
+      <div class="plane-second-opposite" :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"></div>
+      <div class="plane-third-opposite" :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"></div>
     </div>
   </div>
 </template>
@@ -24,7 +31,25 @@
 
 <script>
 export default {
-  name: `Home`
+  name: `Home`,
+  data() {
+    return {
+      oppositePlaneDisplayStatus: false
+    };
+  },
+  methods: {
+    navToOauth() {
+      window.location.href = `https://qingyou.njupt.edu.cn/oauth`;
+    }
+  },
+  mounted() {
+    setInterval(() => {
+      this.oppositePlaneDisplayStatus = !this.oppositePlaneDisplayStatus;
+      // setTimeout(() => {
+      //   this.oppositePlaneDisplayStatus = false;
+      // }, 4500);
+    }, 4500);
+  }
 };
 </script>
 
@@ -33,24 +58,111 @@ export default {
 *
   margin: 0
   padding: 0
-
 .part1-container
   background-image: url("../assets/background/wave-line_1.svg")
   background-repeat: no-repeat
   background-size: cover
-
+  position: relative
+  margin-bottom: 12.5rem
+  @media(max-width: 660px)
+    margin-bottom: 5rem
+  .plane-container
+    @media(max-width: 660px)
+      display: none
+    .plane-first
+      position: absolute
+      width: 4.25rem
+      height: 3.6875rem
+      top: 70.46%
+      left: 7.92vw
+      background-image: url("../assets/Illustrations/jet-1.png")
+      background-size: cover
+      background-repeat: no-repeat
+      animation: planeFirstAnimation 4.5s linear
+    .plane-second
+      position: absolute
+      width: 6.3125rem
+      height: 3.1875rem
+      top: 47.85%
+      left: 38.15vw
+      background-image: url("../assets/Illustrations/jet-2.png")
+      background-size: cover
+      background-repeat: no-repeat
+      animation: planeSecondAnimation 4.5s linear 
+    .plane-third
+      position: absolute
+      width: 6.3125rem
+      height: 2.8125rem
+      top: 27.91%
+      left: 47.19vw
+      background-image: url("../assets/Illustrations/jet-3.png")
+      background-size: cover
+      background-repeat: no-repeat
+      animation: planeThirdAnimation 4.5s linear
+    .plane-first-opposite
+      position: absolute
+      width: 4.25rem
+      height: 3.6875rem
+      top: 70.46%
+      right: 0
+      display: none
+      background-image: url("../assets/Illustrations/jet-1.png")
+      background-size: cover
+      background-repeat: no-repeat
+      animation: planeFirstOppositeAnimation 4.5s linear
+    .plane-second-opposite
+      position: absolute
+      width: 6.3125rem
+      height: 3.1875rem
+      top: 47.85%
+      right: 0
+      display: none
+      background-image: url("../assets/Illustrations/jet-2.png")
+      background-size: cover
+      background-repeat: no-repeat
+      animation: planeSecondOppositeAnimation 4.5s linear
+    .plane-third-opposite
+      position: absolute
+      width: 6.3125rem
+      height: 2.8125rem
+      top: 27.91%
+      right: 0
+      display: none
+      background-image: url("../assets/Illustrations/jet-3.png")
+      background-size: cover
+      background-repeat: no-repeat
+      animation: planeThirdOppositeAnimation 4.5s linear
+@keyframes planeFirstAnimation
+  100%
+    transform: translate(-320px,-160px)
+@keyframes planeSecondAnimation
+  100%
+    transform: translate(-850px,250px)
+@keyframes planeThirdAnimation
+  100%
+    transform: translate(-1000px,150px)
+@keyframes planeFirstOppositeAnimation
+  100%
+    transform: translate(-200px,-650px)
+@keyframes planeSecondOppositeAnimation
+  100%
+    transform: translate(-56vw,70vh)
+@keyframes planeThirdOppositeAnimation
+  100%
+    transform: translate(-106vw,250px)
 .top
   width: 70%
   margin: 0 auto
-  border: 0.375rem solid #a7e1c7
   border-top: none
   height: 5.125rem
+  margin-bottom: 5.125rem
   border-radius: 0 0 0.9375rem 0.9375rem
   display: flex
   justify-content: space-between
   align-items: center
   @media(max-width: 660px)
-    margin-bottom: 40px
+    width: 80%
+    margin-bottom: 1.875rem
   .studio-icon
     margin-left: 2.25rem
   button
@@ -75,10 +187,18 @@ export default {
   margin: 0rem auto
   display: flex
   align-items: flex-end
-  justify-content: center
+  justify-content: flex-start
+  background-repeat: no-repeat
+  background-image: url("../assets/Illustrations/home.png")
+  background-size: 90%
+  background-position: 0% 100%
+  @media(max-width: 1024px)
+    justify-content: center
+    background: none
+  .xiao-and-qin
+    width: 34.75rem
+    height: 24.6875rem
   .introduction-img
-    background-image: url("../assets/Illustrations/static_assets_rpm6.svg")
-    background-size: 100% 100%
     width: 34.75rem
     height: 24.6875rem
     @media(max-width: 660px)
@@ -89,6 +209,8 @@ export default {
     h1
       font-size: 3.5rem
       color: #22b574
+      @media(max-width: 1024px)
+        text-align: center
     p
       text-align: justify
       font-size: 1.25rem
@@ -102,7 +224,7 @@ export default {
       img
         width: 6rem
     button
-      width: 5rem
+      width: 8rem
       margin-right: 0.7rem
   .introduction
     flex-direction: column

@@ -1,6 +1,7 @@
 <template>
   <div class="part4">
     <div class="part-title-container">
+      <div class="part-title-img-container"></div>
       <div class="title-bubble bubble1"></div>
       <div class="title-bubble bubble2"></div>
       <span class="title-text">我们欢迎</span>
@@ -112,21 +113,25 @@ export default {
     margin: 0 auto
     width: 72%
     height: 40rem
-    background-image: url('../assets/Illustrations/version_control_9bpv.svg')
+    background-image: url('../assets/Illustrations/xiaochenxu_2.png')
     background-repeat: no-repeat
     background-position: center center
-    background-size: 60%
+    // background-size: 60%
     position: relative
     margin-top: 2rem
+    @media(max-width: $ipad)
+      height: 30rem
+      background-size: 50%
     @media(max-width: $phone)
       height: 15rem
-      background-size: 100%
     .title-text
       font-size: 2.5rem
       color: #222222
       font-weight: 600
       @media(max-width: $phone)
         font-size: 1.5rem
+    .part-title-img-container
+      
   .part-content
     width: 100%
     background-image: url('../assets/background/wave-line_4.svg')
@@ -140,9 +145,10 @@ export default {
       justify-content: space-between
       align-items: center
       @media(min-width: $phone)
-        width: 72%
+        width: 74%
       @media(max-width: $ipad)
-        justify-content: center
+        width: 92%
+        justify-content: space-around
       .content-card
         position: relative
         height: 25rem
@@ -170,6 +176,7 @@ export default {
         .card2
           transform: rotate(-60deg)
         .card-content
+          cursor: pointer
           height: 8rem
           width: 16rem
           display: flex
@@ -199,8 +206,8 @@ export default {
             transition: all .2s ease .0s
   .part-image
     width: 72%
-    margin: 0 0
-    @media(min-width: $phone)
-      height: 40rem
+    margin: 20px 0
+    @media(min-width: $ipad)
+      height: 33.5625rem
       margin: 5rem 0
 </style>
