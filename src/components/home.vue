@@ -45,9 +45,6 @@ export default {
   mounted() {
     setInterval(() => {
       this.oppositePlaneDisplayStatus = !this.oppositePlaneDisplayStatus;
-      // setTimeout(() => {
-      //   this.oppositePlaneDisplayStatus = false;
-      // }, 4500);
     }, 4500);
   }
 };
@@ -92,7 +89,7 @@ export default {
     .plane-third
       position: absolute
       width: 6.3125rem
-      height: 2.8125rem
+      height: 2.9375rem
       top: 27.91%
       left: 47.19vw
       background-image: url("../assets/Illustrations/jet-3.png")
@@ -124,7 +121,7 @@ export default {
     .plane-third-opposite
       position: absolute
       width: 6.3125rem
-      height: 2.8125rem
+      height: 2.9375rem
       top: 27.91%
       right: 0
       display: none
@@ -190,8 +187,8 @@ export default {
   justify-content: flex-start
   background-repeat: no-repeat
   background-image: url("../assets/Illustrations/home.png")
-  background-size: 90%
-  background-position: 0% 100%
+  background-size: 53%
+  background-position: 100% 88%
   @media(max-width: 1024px)
     justify-content: center
     background: none

@@ -29,8 +29,9 @@ export default {
   display: flex
   flex-direction: column
   align-items: center
-  @media(min-width: 660px)
-    margin-bottom: 205px
+  margin-bottom: 205px
+  @media(max-width: 660px)
+    margin-bottom: 105px
   .part-title-container
     margin: 0 auto
     width: 72%
