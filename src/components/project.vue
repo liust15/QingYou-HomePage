@@ -13,19 +13,49 @@
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-card-name">「南邮本科生小程序」</div>
-            <div class="project-detail">轻量级移动端智慧校园解决方案。在不弃用高校现有各系统的情况下，对学生日常使用的各系统功能进行整合，并在手机上通过即走即用、无需下载的微信小程序的方式展现。</div>
+            <div
+              class="project-detail"
+            >轻量级移动端智慧校园解决方案。在不弃用高校现有各系统的情况下，对学生日常使用的各系统功能进行整合，并在手机上通过即走即用、无需下载的微信小程序的方式展现。</div>
           </div>
           <div class="project-card-body">
-            <img src="../assets/product-intro/under-graduate.png" alt="" />
+            <img src="../assets/product-intro/under-graduate.png" alt>
           </div>
         </div>
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-card-name">「南邮研究生小程序」</div>
-            <div class="project-detail">轻量级移动端智慧校园解决方案。以南邮研究生同学服务作为出发点，创造解决南邮研究生生活学习中存在的痛点的可能，提供定制化服务。</div>
+            <div
+              class="project-detail"
+            >轻量级移动端智慧校园解决方案。以南邮研究生同学服务作为出发点，创造解决南邮研究生生活学习中存在的痛点的可能，提供定制化服务。</div>
           </div>
           <div class="project-card-body">
-            <img src="../assets/product-intro/graduate.png" alt="" />
+            <img src="../assets/product-intro/graduate.png" alt>
+          </div>
+        </div>
+      </div>
+      <div class="part3-body">
+        <div class="project-card">
+          <div class="project-card-header">
+            <div class="project-card-name">「寒假期末报告单」</div>
+            <div
+              class="project-detail"
+              @click="navToWinterReport"
+            >在2018年寒假一经推出就受到了大家的热烈追捧和转发，以活泼的画面和新鲜的内容吸引了大家的眼球。一度刷屏南邮师生的朋友圈。（体验账号：demo，密码：demo）</div>
+          </div>
+          <div class="project-card-body">
+            <img src="../assets/product-intro/annu1.png" alt>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-card-header">
+            <div class="project-card-name">「暑假期末报告单」</div>
+            <div
+              class="project-detail"
+              @click="navToSummerReport"
+            >2018年暑假，第二张《南邮本科生期末报告单》再次推出，清新亮丽的画风再次引得南邮学子的认可，引发朋友圈刷屏。（体验账号：demo，密码：demo）</div>
+          </div>
+          <div class="project-card-body">
+            <img src="../assets/product-intro/annu2.png" alt>
           </div>
         </div>
       </div>
@@ -35,7 +65,15 @@
 
 <script>
 export default {
-  name: `Project`
+  name: `Project`,
+  methods: {
+    navToWinterReport() {
+      window.location.href = "https://qingyou.njupt.edu.cn/annual2017/";
+    },
+    navToSummerReport() {
+      window.location.href = "https://qingyou.njupt.edu.cn/bgd2/";
+    }
+  }
 };
 </script>
 
@@ -78,8 +116,8 @@ export default {
           margin-bottom: 0.625rem
         color: #222222
       .header-image
-        width: 540px
-        height: 417px
+        width: 33.75rem
+        height: 26.0625rem
         background-size: 70%
         background-position: center
         background-repeat: no-repeat
@@ -87,32 +125,34 @@ export default {
           margin: auto
           background-size: 60%
         @media(max-width: $phone)
-          width: 280px
-          height: 210px
+          width: 17.5rem
+          height: 13.125rem
         background-image: url('../assets/Illustrations/xiaochenxu_1.png')
     .part3-body
       width: 100%
       display: flex
       justify-content: space-between
-      // @media(max-width: $phone)
+      margin-bottom: 3.125rem
       @media(max-width: $ipad)
+        margin-bottom: 0
         align-items: center
         flex-direction: column
         width: 100vw
         justify-content: space-around
       .project-card
-        width: 460px
-        height: 345px
+        width: 28.75rem
+        height: 21.5625rem
         border-radius: 10px
         position: relative
+        cursor: pointer
         @media(min-width: $ipad)
-          margin-right: 20px
+          margin-right: 1.25rem
         @media(max-width: $ipad)
-          margin-bottom: 70px
+          margin-bottom: 4.375rem
         @media(max-width: $phone)
-          margin-bottom: 80px
-          width: 280px
-          height: 210px
+          margin-bottom: 5rem
+          width: 17.5rem
+          height: 13.125rem
         &:hover
           .project-card-header
             transform: translateY(-90px)
@@ -134,28 +174,28 @@ export default {
           background-color: #22b574
           color: #ffffff
           .project-card-name
-            margin-left: 36px
-            padding-top: 24px
-            margin-bottom: 16px
+            margin-left: 2.25rem
+            padding-top: 1.5rem
+            margin-bottom: 1rem
             @media(min-width: $phone)
-              font-size: 24px
+              font-size: 1.5rem
           .project-detail
             text-align: justify
-            padding: 2px
+            padding: 0.125rem
             margin: auto
-            line-height: 20px
+            line-height: 1.25rem
             font-size: 90%
             @media(min-width: $phone)
-              max-width: 390px
-              font-size: 18px
-              line-height: 24px
+              max-width: 24.375rem
+              font-size: 1.125rem
+              line-height: 1.5rem
         .project-card-body
           width: 100%
           height: 82%
           border-radius: 10px
           position: absolute
           transition: all 0.3s ease-out
-          top: 60px
+          top: 3.75rem
           background-color: #fafafa
           background-size: cover
           display: flex
