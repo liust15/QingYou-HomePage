@@ -72,7 +72,7 @@ export default {
       height: 3.6875rem
       top: 70.46%
       left: 7.92vw
-      background-image: url("../assets/Illustrations/jet-1.png")
+      background-image: url("https://static.airbob.org/homepage/jet-1.png")
       background-size: cover
       background-repeat: no-repeat
       animation: planeFirstAnimation 4.5s linear
@@ -82,7 +82,7 @@ export default {
       height: 3.1875rem
       top: 47.85%
       left: 38.15vw
-      background-image: url("../assets/Illustrations/jet-2.png")
+      background-image: url("https://static.airbob.org/homepage/jet-2.png")
       background-size: cover
       background-repeat: no-repeat
       animation: planeSecondAnimation 4.5s linear 
@@ -92,7 +92,7 @@ export default {
       height: 2.9375rem
       top: 27.91%
       left: 47.19vw
-      background-image: url("../assets/Illustrations/jet-3.png")
+      background-image: url("https://static.airbob.org/homepage/jet-3.png")
       background-size: cover
       background-repeat: no-repeat
       animation: planeThirdAnimation 4.5s linear
@@ -103,7 +103,7 @@ export default {
       top: 70.46%
       right: 0
       display: none
-      background-image: url("../assets/Illustrations/jet-1.png")
+      background-image: url("https://static.airbob.org/homepage/jet-1.png")
       background-size: cover
       background-repeat: no-repeat
       animation: planeFirstOppositeAnimation 4.5s linear
@@ -114,7 +114,7 @@ export default {
       top: 47.85%
       right: 0
       display: none
-      background-image: url("../assets/Illustrations/jet-2.png")
+      background-image: url("https://static.airbob.org/homepage/jet-2.png")
       background-size: cover
       background-repeat: no-repeat
       animation: planeSecondOppositeAnimation 4.5s linear
@@ -125,7 +125,7 @@ export default {
       top: 27.91%
       right: 0
       display: none
-      background-image: url("../assets/Illustrations/jet-3.png")
+      background-image: url("https://static.airbob.org/homepage/jet-3.png")
       background-size: cover
       background-repeat: no-repeat
       animation: planeThirdOppositeAnimation 4.5s linear
@@ -186,7 +186,7 @@ export default {
   align-items: flex-end
   justify-content: flex-start
   background-repeat: no-repeat
-  background-image: url("../assets/Illustrations/home.png")
+  background-image: url("https://static.airbob.org/homepage/home.png")
   background-size: 53%
   background-position: 100% 88%
   @media(max-width: 1024px)

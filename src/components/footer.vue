@@ -22,7 +22,7 @@
           <div class="QR-Code">
             <div>
               <img
-                src="../assets/qrcode/qrcode.png"
+                src="https://static.airbob.org/homepage/qrcode.png"
                 style="width:10rem;height:10rem"
               />
             </div>

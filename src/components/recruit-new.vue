@@ -120,7 +120,7 @@ export default {
     margin: 0 auto
     width: 72%
     height: 40rem
-    background-image: url('../assets/Illustrations/xiaochenxu_2.png')
+    background-image: url('https://static.airbob.org/homepage/xiaochenxu_2.png')
     background-repeat: no-repeat
     background-position: center center
     position: relative

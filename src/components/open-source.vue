@@ -6,7 +6,7 @@
       <span class="title-text">我们的开源</span>
     </div>
     <div class="image-container" @click="navToGithubRepository">
-      <img src="../assets/open-source/qingyougit.png" alt="">
+      <img src="https://static.airbob.org/homepage/qingyougit.png" alt="">
     </div>
   </div>
 </template>
