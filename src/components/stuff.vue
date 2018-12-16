@@ -50,6 +50,7 @@
 
 
 <script>
+import avatar0 from "../assets/stuff-avatar/gyr.jpg";
 import avatar1 from "../assets/stuff-avatar/yyl.jpg";
 import avatar2 from "../assets/stuff-avatar/gy.jpg";
 import avatar3 from "../assets/stuff-avatar/jzw.jpg";
@@ -91,6 +92,14 @@ export default {
   data() {
     return {
       stuffInformation: [
+        {
+          name: "顾亦然",
+          goodAt:
+            "教授，硕士生导师，信息化建设与管理办公室主任，青柚工作室指导老师",
+          ImgUrl: avatar0,
+          description:
+            "复杂系统建模、分析与优化，复杂系统中人类行为动力学研究，计算机控制理论及嵌入式系统在复杂系统中的应用。"
+        },
         {
           name: "严宇倞",
           goodAt: "Java，Web，Microservices",
@@ -318,13 +327,69 @@ export default {
       leftDistance: 0,
       stuffInformationPhone: [
         {
+          name: "顾亦然",
+          goodAt:
+            "教授，硕士生导师，信息化建设与管理办公室主任，青柚工作室指导老师",
+          ImgUrl: avatar0,
+          description:
+            "复杂系统建模、分析与优化，复杂系统中人类行为动力学研究，计算机控制理论及嵌入式系统在复杂系统中的应用。"
+        },
+        {
+          name: "朱晓峰",
+          goodAt: "后端、数据分析",
+          ImgUrl: avatar4,
+          description: "世间草木皆美，人不是。中药很苦，你也是。"
+        },
+        {
+          name: "宁泓皓",
+          goodAt: "前端",
+          ImgUrl: avatar13,
+          description: "对不起，02是我老婆…"
+        },
+        {
+          name: "杨丛铭",
+          goodAt: "UI、前端",
+          ImgUrl: avatar17,
+          description: "在理性的代码和感性的设计中间找到平衡。"
+        },
+        {
+          name: "欧阳宇翔",
+          goodAt: "安卓",
+          ImgUrl: avatar21,
+          description: "本工作室最菜，广告位招租，头像我老婆。"
+        },
+        {
+          name: "鲍可",
+          goodAt: "前端",
+          ImgUrl: avatar25,
+          description:
+            "南京邮电大学17级计算机学院信息安全学生,主要方向是前端,不断学习中～"
+        },
+        {
+          name: "吴爱天",
+          goodAt: "后端",
+          ImgUrl: avatar9,
+          description: "切图，写写业务，啥杂都打打的万金油。。。。。"
+        },
+        {
+          name: "梁天琦",
+          goodAt: "前端",
+          ImgUrl: avatar26,
+          description: "JavaScript是世界上最混乱邪恶的语言"
+        },
+        {
+          name: "周捷",
+          goodAt: "安全",
+          ImgUrl: avatar11,
+          description: "妈耶，这个站怎么日?"
+        },
+        {
           name: "严宇倞",
           goodAt: "Java，Web，Microservices",
           ImgUrl: avatar1,
           description:
             "中年程序员，低配全栈，想跨过山和大海，也想穿过人山人海。"
         },
-
         {
           name: "张楚月",
           goodAt: "UI",
@@ -369,10 +434,11 @@ export default {
           description: "没有才华"
         },
         {
-          name: "周捷",
-          goodAt: "安全",
-          ImgUrl: avatar11,
-          description: "妈耶，这个站怎么日?"
+          name: "李懿峰",
+          goodAt: "运营",
+          ImgUrl: avatar33,
+          description:
+            "万分感谢青柚工作室收容very vegetable的我。希望这个世界因为我而变得好一点，在那之前先努力自我救赎吧。"
         },
         {
           name: "顾怡",
@@ -486,56 +552,6 @@ export default {
           goodAt: "后端",
           ImgUrl: avatar32,
           description: "张佑杰，男，1999年生，现年18岁，马上19岁，明年20岁。"
-        },
-        {
-          name: "朱晓峰",
-          goodAt: "后端、数据分析",
-          ImgUrl: avatar4,
-          description: "世间草木皆美，人不是。中药很苦，你也是。"
-        },
-        {
-          name: "宁泓皓",
-          goodAt: "前端",
-          ImgUrl: avatar13,
-          description: "对不起，02是我老婆…"
-        },
-        {
-          name: "杨丛铭",
-          goodAt: "UI、前端",
-          ImgUrl: avatar17,
-          description: "在理性的代码和感性的设计中间找到平衡。"
-        },
-        {
-          name: "欧阳宇翔",
-          goodAt: "安卓",
-          ImgUrl: avatar21,
-          description: "本工作室最菜，广告位招租，头像我老婆。"
-        },
-        {
-          name: "鲍可",
-          goodAt: "前端",
-          ImgUrl: avatar25,
-          description:
-            "南京邮电大学17级计算机学院信息安全学生,主要方向是前端,不断学习中～"
-        },
-        {
-          name: "吴爱天",
-          goodAt: "后端",
-          ImgUrl: avatar9,
-          description: "切图，写写业务，啥杂都打打的万金油。。。。。"
-        },
-        {
-          name: "梁天琦",
-          goodAt: "前端",
-          ImgUrl: avatar26,
-          description: "JavaScript是世界上最混乱邪恶的语言"
-        },
-        {
-          name: "李懿峰",
-          goodAt: "运营",
-          ImgUrl: avatar33,
-          description:
-            "万分感谢青柚工作室收容very vegetable的我。希望这个世界因为我而变得好一点，在那之前先努力自我救赎吧。"
         }
       ],
       stuffInformationDisplay: []
@@ -547,9 +563,9 @@ export default {
         (() => {
           this.cardInfo = this.stuffInformationDisplay[index];
           this.cardShowStatus = true;
-          setTimeout(() => {
-            this.closeCard();
-          }, 5000);
+          // setTimeout(() => {
+          //   this.closeCard();
+          // }, 7000);
         })()
       );
     },

@@ -18,7 +18,7 @@
             >轻量级移动端智慧校园解决方案。在不弃用高校现有各系统的情况下，对学生日常使用的各系统功能进行整合，并在手机上通过即走即用、无需下载的微信小程序的方式展现。</div>
           </div>
           <div class="project-card-body">
-            <img src="../assets/product-intro/under-graduate.png" alt>
+            <img src="https://static.airbob.org/homepage/under-graduate.png" alt>
           </div>
         </div>
         <div class="project-card">
@@ -29,7 +29,7 @@
             >轻量级移动端智慧校园解决方案。以南邮研究生同学服务作为出发点，创造解决南邮研究生生活学习中存在的痛点的可能，提供定制化服务。</div>
           </div>
           <div class="project-card-body">
-            <img src="../assets/product-intro/graduate.png" alt>
+            <img src="https://static.airbob.org/homepage/graduate.png" alt>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@
             >在2018年寒假一经推出就受到了大家的热烈追捧和转发，以活泼的画面和新鲜的内容吸引了大家的眼球。一度刷屏南邮师生的朋友圈。（体验账号：demo，密码：demo）</div>
           </div>
           <div class="project-card-body">
-            <img src="../assets/product-intro/annu1.png" alt>
+            <img src="https://static.airbob.org/homepage/annu1.png" alt>
           </div>
         </div>
         <div class="project-card">
@@ -55,7 +55,7 @@
             >2018年暑假，第二张《南邮本科生期末报告单》再次推出，清新亮丽的画风再次引得南邮学子的认可，引发朋友圈刷屏。（体验账号：demo，密码：demo）</div>
           </div>
           <div class="project-card-body">
-            <img src="../assets/product-intro/annu2.png" alt>
+            <img src="https://static.airbob.org/homepage/annu2.png" alt>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ export default {
         @media(max-width: $phone)
           width: 17.5rem
           height: 13.125rem
-        background-image: url('../assets/Illustrations/xiaochenxu_1.png')
+        background-image: url('https://static.airbob.org/homepage/xiaochenxu_1.png')
     .part3-body
       width: 100%
       display: flex
