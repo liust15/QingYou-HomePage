@@ -10,7 +10,7 @@
         <div class="stuff-avatar" ref="stuffAvatar">
           <div
             class="stuff-card"
-            :style="{borderTopColor: `${borderColor(index)}`}"
+            :style="{borderTopColor: `${borderColor(index)}`,marginRight: `${removeRightMargin(index)}`}"
             v-for="(item,index) in stuffInformationDisplay"
             :key="index"
             @mouseover="showCard(index)"
@@ -580,6 +580,9 @@ export default {
         return this.borderColorArray[1];
       }
     },
+    removeRightMargin(index) {
+      if ((index + 1) % 9 === 0) return 0;
+    },
     scrollLeft() {
       const maxWidth = this.$refs.stuffContainer.clientWidth;
       const innerWidth = this.$refs.stuffAvatar.clientWidth;
@@ -657,7 +660,7 @@ export default {
         div
           padding: 0.625rem
       .stuff-avatar
-        width: 1650px
+        width: 1597px
         overflow-x: scroll
         overflow-y: hidden
         max-height: 42.75rem
