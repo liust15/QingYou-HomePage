@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="bottom">
-          <p>CopyRight @2017-2018 青柚工作室 qingyou.njupt.edu.cn</p>
+          <p>CopyRight @2017-2019 青柚工作室 qingyou.njupt.edu.cn</p>
         </div>
       </div>
     </div>
