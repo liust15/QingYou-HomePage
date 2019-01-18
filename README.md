@@ -1,32 +1,24 @@
-## 青柚工作室主页
+## [青柚工作室主页](https://qingyou.njupt.edu.cn)
 
-### GreenPomelo-homepage
+### 青柚工作室简介
 
-青柚工作室成立于 2017 年 10 月，现已有超过 30 位成员分别负责技术、设计、运营推广等工作。截止到现在，青柚工作室已经开发“南京邮电大学"、“校谈”等微信小程序。其中，“南邮小程序”现已有超过 3.9 万用户，日均活跃量超过 8 千人次。
+  青柚工作室成立于 2017 年 10 月，现已有超过 30 位成员分别负计、运营推广等工作。截止到现在，青柚工作室已经开发“南京邮电大学”、“校谈”、“Pho头shop”等微信小程序。其中，“南邮小程序”现已有超过 5.5 万用户量超过 1 万 3 千人次。
 
 ---
 
-## Project setup
+### 本项目使用 Vue CLI 3 搭建
+
+#### 安装依赖
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+#### 编译以及热更新
 ```
 yarn run serve
 ```
 
-### Compiles and minifies for production
+#### 生产环境打包
 ```
 yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
 ```
