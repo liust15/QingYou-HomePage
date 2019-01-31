@@ -10,7 +10,6 @@
         <div class="header-image"></div>
       </div>
       <div class="part3-body">
-        <!-- <div class="project-card" @click="changeIndex"> -->
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-card-name">「南邮本科生小程序」</div>
@@ -33,8 +32,6 @@
             <img src="https://static.airbob.org/homepage/graduate.png" alt>
           </div>
         </div>
-      </div>
-      <div class="part3-body">
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-card-name">「寒假期末报告单」</div>
@@ -73,10 +70,6 @@ export default {
     },
     navToSummerReport() {
       window.location.href = "https://qingyou.njupt.edu.cn/bgd2/";
-    },
-    changeIndex() {
-      // this.style.zIndex = "100";
-      console.log('supernman');
     }
   }
 };
@@ -84,6 +77,8 @@ export default {
 
 <style lang="sass" scoped>
 @import "../style/bubble.sass"
+.z-top
+  z-index: 1
 .part3
   width: 100vw
   background-image: url('../assets/background/wave-line_3.svg')
@@ -135,23 +130,23 @@ export default {
         background-image: url('https://static.airbob.org/homepage/xiaochenxu_1.png')
     .part3-body
       width: 100%
-      display: flex
-      justify-content: space-between
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
       margin-bottom: 3.125rem
       @media(max-width: $ipad)
+        grid-template-columns: repeat(1, 1fr)
         margin-bottom: 0
-        align-items: center
-        flex-direction: column
+        justify-items: center
         width: 100vw
-        justify-content: space-around
       .project-card
+        color: red
         width: 28.75rem
         height: 21.5625rem
         border-radius: 10px
         position: relative
         cursor: pointer
         @media(min-width: $ipad)
-          margin-right: 1.25rem
+          margin-bottom: 2.225rem
         @media(max-width: $ipad)
           margin-bottom: 4.375rem
         @media(max-width: $phone)
@@ -159,22 +154,16 @@ export default {
           width: 17.5rem
           height: 13.125rem
         &:hover
-          .project-card
-            z-index: 100
+          z-index: 1 // 保证hover到的card在顶层
           .project-card-header
-            transform: translateY(-90px)
-            @media(max-width: $phone)
-              transform: translateY(-65px)
+            transform: translateY(-50%)
           .project-card-body
-            box-shadow: 0 -5px 10px -4px rgba(0,0,0,0.30)
-            transform: scale(1.1) translateY(60px)
-            @media(max-width: $phone)
-              transform: scale(1.1) translateY(45px)
+            box-shadow: 0 -5px 10px -4px rgba(0,0,0,0.20)
+            transform: scale(1.1) translateY(20%)
         .project-card-header
-          border-top-left-radius: 10px
-          border-top-right-radius: 10px
+          border-radius: 1rem;
           width: 100%
-          height: 82%
+          height: auto
           transition: all 0.3s ease-out 
           position: absolute
           top: 0
@@ -188,17 +177,16 @@ export default {
               font-size: 1.5rem
           .project-detail
             text-align: justify
-            padding: 0.125rem
+            padding: 1.25rem
             margin: auto
             line-height: 1.25rem
             font-size: 90%
             @media(min-width: $phone)
-              max-width: 24.375rem
               font-size: 1.125rem
               line-height: 1.5rem
         .project-card-body
           width: 100%
-          height: 82%
+          height: auto
           border-radius: 10px
           position: absolute
           transition: all 0.3s ease-out
