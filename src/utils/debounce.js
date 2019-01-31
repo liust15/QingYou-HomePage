@@ -6,7 +6,7 @@
  * @return {Function}     返回一个“防反跳”了的函数
  */
 
-export default function debounce(fn, delay = 250) {
+export default function (fn, delay = 250) {
   var timer;
   return function() {
     var context = this;

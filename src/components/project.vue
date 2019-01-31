@@ -10,6 +10,7 @@
         <div class="header-image"></div>
       </div>
       <div class="part3-body">
+        <!-- <div class="project-card" @click="changeIndex"> -->
         <div class="project-card">
           <div class="project-card-header">
             <div class="project-card-name">「南邮本科生小程序」</div>
@@ -72,6 +73,10 @@ export default {
     },
     navToSummerReport() {
       window.location.href = "https://qingyou.njupt.edu.cn/bgd2/";
+    },
+    changeIndex() {
+      // this.style.zIndex = "100";
+      console.log('supernman');
     }
   }
 };
@@ -154,6 +159,8 @@ export default {
           width: 17.5rem
           height: 13.125rem
         &:hover
+          .project-card
+            z-index: 100
           .project-card-header
             transform: translateY(-90px)
             @media(max-width: $phone)
