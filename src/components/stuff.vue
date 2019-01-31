@@ -654,6 +654,7 @@ export default {
         box-sizing: border-box
         border-image-slice: 10
         border-top: 0.375rem solid #22b574
+        pointer-events: none; // 屏蔽事件响应
         @media(min-width: $phone)
           bottom: 5%
           width: 25rem
