@@ -1,12 +1,18 @@
 <template>
   <div class="part5">
     <div class="part-title-container">
-      <div class="title-bubble bubble1"></div>
-      <div class="title-bubble bubble2"></div>
+      <div class="title-bubble bubble1" />
+      <div class="title-bubble bubble2" />
       <span class="title-text">我们的开源</span>
     </div>
-    <div class="image-container" @click="navToGithubRepository">
-      <img src="https://static.airbob.org/homepage/qingyougit.png" alt="">
+    <div
+      class="image-container"
+      @click="navToGithubRepository"
+    >
+      <img
+        src="https://static.airbob.org/homepage/qingyougit.png"
+        alt
+      >
     </div>
   </div>
 </template>

@@ -3,57 +3,36 @@
     <div class="part3-container">
       <div class="part3-header">
         <div class="part3-title-container">
-          <div class="title-bubble bubble1"></div>
-          <div class="title-bubble bubble2"></div>
-          <div class="title-font">我们推出了</div>
+          <div class="title-bubble bubble1" />
+          <div class="title-bubble bubble2" />
+          <div class="title-font">
+            我们推出了
+          </div>
         </div>
-        <div class="header-image"></div>
+        <div class="header-image" />
       </div>
       <div class="part3-body">
-        <div class="project-card">
+        <div
+          v-for="(item,index) in projectCardInfo"
+          :key="index"
+          class="project-card"
+        >
           <div class="project-card-header">
-            <div class="project-card-name">「南邮本科生小程序」</div>
+            <div class="project-card-name">
+              {{ item.cardTitle }}
+            </div>
             <div
               class="project-detail"
-            >轻量级移动端智慧校园解决方案。在不弃用高校现有各系统的情况下，对学生日常使用的各系统功能进行整合，并在手机上通过即走即用、无需下载的微信小程序的方式展现。</div>
+              @click="navToCardLink(item)"
+            >
+              {{ item.cardIntro }}
+            </div>
           </div>
           <div class="project-card-body">
-            <img src="https://static.airbob.org/homepage/under-graduate.png" alt>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-header">
-            <div class="project-card-name">「南邮研究生小程序」</div>
-            <div
-              class="project-detail"
-            >轻量级移动端智慧校园解决方案。以南邮研究生同学服务作为出发点，创造解决南邮研究生生活学习中存在的痛点的可能，提供定制化服务。</div>
-          </div>
-          <div class="project-card-body">
-            <img src="https://static.airbob.org/homepage/graduate.png" alt>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-header">
-            <div class="project-card-name">「寒假期末报告单」</div>
-            <div
-              class="project-detail"
-              @click="navToWinterReport"
-            >在2018年寒假一经推出就受到了大家的热烈追捧和转发，以活泼的画面和新鲜的内容吸引了大家的眼球。一度刷屏南邮师生的朋友圈。（体验账号：demo，密码：demo）</div>
-          </div>
-          <div class="project-card-body">
-            <img src="https://static.airbob.org/homepage/annu1.png" alt>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-header">
-            <div class="project-card-name">「暑假期末报告单」</div>
-            <div
-              class="project-detail"
-              @click="navToSummerReport"
-            >2018年暑假，第二张《南邮本科生期末报告单》再次推出，清新亮丽的画风再次引得南邮学子的认可，引发朋友圈刷屏。（体验账号：demo，密码：demo）</div>
-          </div>
-          <div class="project-card-body">
-            <img src="https://static.airbob.org/homepage/annu2.png" alt>
+            <img
+              :src="item.cardImage"
+              alt
+            >
           </div>
         </div>
       </div>
@@ -64,12 +43,58 @@
 <script>
 export default {
   name: `Project`,
+  data() {
+    return {
+      projectCardInfo: [
+        {
+          cardTitle: "「南邮本科生小程序」",
+          cardIntro:
+            "轻量级移动端智慧校园解决方案。在不弃用高校现有各系统的情况下，对学生日常使用的各系统功能进行整合，并在手机上通过即走即用、无需下载的微信小程序的方式展现。",
+
+          cardImage: "https://static.airbob.org/homepage/under-graduate.png"
+        },
+        {
+          cardTitle: "「南邮研究生小程序」",
+          cardIntro:
+            "轻量级移动端智慧校园解决方案。以南邮研究生同学服务作为出发点，创造解决南邮研究生生活学习中存在的痛点的可能，提供定制化服务。",
+
+          cardImage: "https://static.airbob.org/homepage/graduate.png"
+        },
+        {
+          cardTitle: "「2018寒假期末报告单」",
+          cardIntro:
+            "在2018年寒假一经推出就受到了大家的热烈追捧和转发，以活泼的画面和新鲜的内容吸引了大家的眼球。一度刷屏南邮师生的朋友圈。（体验账号：demo，密码：demo）",
+          cardLink: "https://qingyou.njupt.edu.cn/annual2017/",
+          cardImage: "https://static.airbob.org/homepage/annu1.png"
+        },
+        {
+          cardTitle: "「2018暑假期末报告单」",
+          cardIntro:
+            "2018年暑假，第二张《南邮本科生期末报告单》再次推出，清新亮丽的画风再次引得南邮学子的认可，引发朋友圈刷屏。（体验账号：demo，密码：demo）",
+          cardLink: "https://qingyou.njupt.edu.cn/bgd2/",
+          cardImage: "https://static.airbob.org/homepage/annu2.png"
+        },
+        {
+          cardTitle: "「2019寒假期末报告单」",
+          cardIntro:
+            "2019年寒假，第二张《南邮本科生期末报告单》像往常一样再次推出。今年新增学期标签！据说只有1/192000的概率完全相同哦。点击卡片跳转，使用游客模式访问即可。",
+          cardLink: "https://qingyou.njupt.edu.cn/bgd3/",
+          cardImage: "https://static.airbob.org/homepage/2019-winter.jpg"
+        },
+        {
+          cardTitle: "「你头像真棒 小程序」",
+          cardIntro:
+            "一款头像主题商店小程序，你能在里面找到不同主题的头像挂件，然后生成头像。目前用户人数达到 4000。扫描菊花码体验",
+          cardImage: "https://static.airbob.org/homepage/photoshop.png"
+        }
+      ]
+    };
+  },
   methods: {
-    navToWinterReport() {
-      window.location.href = "https://qingyou.njupt.edu.cn/annual2017/";
-    },
-    navToSummerReport() {
-      window.location.href = "https://qingyou.njupt.edu.cn/bgd2/";
+    navToCardLink({ cardLink }) {
+      if (cardLink) {
+        window.location.href = cardLink;
+      }
     }
   }
 };

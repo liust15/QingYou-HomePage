@@ -1,30 +1,49 @@
 
 <template>
   <div id="part6">
-    <!-- <div class="animation-container"> -->
-    <div class="animation-container animation-item1"></div>
-    <div class="animation-container animation-item2"></div>
-    <!-- </div> -->
+    <div class="animation-container animation-item1" />
+    <div class="animation-container animation-item2" />
     <div class="bcg1">
       <div class="bcg2">
         <div class="items">
           <div class="text">
-            <div class="cube"></div>
-            <br />
-            <p class="mail-paragragh" @click="mailToQingYou">官方邮箱</p>
-            <p class="mail-paragragh" @click="mailToQingYou">qingyou@njupt.edu.cn</p>
-            <br /><br />
-            <div class="cube"></div>
-            <br />
-            <div><a href="https://github.com/GreenPomelo" style="color:#ffffff">开源仓库</a></div>
-            <div><a href="https://qingyou.njupt.edu.cn/oauth" style="color: #ffffff">Oauth认证</a></div>
+            <div class="cube" />
+            <br>
+            <p
+              class="mail-paragragh"
+              @click="mailToQingYou"
+            >
+              官方邮箱
+            </p>
+            <p
+              class="mail-paragragh"
+              @click="mailToQingYou"
+            >
+              qingyou@njupt.edu.cn
+            </p>
+            <br>
+            <br>
+            <div class="cube" />
+            <br>
+            <div>
+              <a
+                href="https://github.com/GreenPomelo"
+                style="color:#ffffff"
+              >开源仓库</a>
+            </div>
+            <div>
+              <a
+                href="https://qingyou.njupt.edu.cn/oauth"
+                style="color: #ffffff"
+              >Oauth认证</a>
+            </div>
           </div>
           <div class="QR-Code">
             <div>
               <img
                 src="https://static.airbob.org/homepage/qrcode.png"
                 style="width:10rem;height:10rem"
-              />
+              >
             </div>
             <p>官方QQ</p>
           </div>
@@ -43,7 +62,7 @@ export default {
   name: `Footer`,
   methods: {
     mailToQingYou() {
-      window.location = "mailto:qingyou@njupt.edu.cn"
+      window.location = "mailto:qingyou@njupt.edu.cn";
     }
   }
 };
