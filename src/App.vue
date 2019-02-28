@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Home/>
+    <Home />
     <Project />
     <Stuff />
     <Recruit />
@@ -17,7 +17,7 @@ import Recruit from "./components/recruit-new";
 import OpenSource from "./components/open-source";
 import Footer from "./components/footer";
 export default {
-  name: "app",
+  name: "App",
   components: {
     Home,
     Stuff,

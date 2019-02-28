@@ -2,23 +2,37 @@
   <div class="part2">
     <div class="part2-content-container">
       <div class="part2-container-title">
-        <div class="title-bubble bubble1"></div>
-        <div class="title-bubble bubble2"></div>
-        <div class="title-font">我们有多强</div>
+        <div class="title-bubble bubble1" />
+        <div class="title-bubble bubble2" />
+        <div class="title-font">
+          我们有多强
+        </div>
       </div>
-      <div class="stuff-container" ref="stuffContainer" @scroll="scrollLeft">
-        <div class="stuff-avatar" ref="stuffAvatar">
+      <div
+        ref="stuffContainer"
+        class="stuff-container"
+        @scroll="scrollLeft"
+      >
+        <div
+          ref="stuffAvatar"
+          class="stuff-avatar"
+        >
           <div
-            class="stuff-card"
-            :style="{borderTopColor: `${borderColor(index)}`,marginRight: `${removeRightMargin(index)}`}"
             v-for="(item,index) in stuffInformationDisplay"
             :key="index"
+            class="stuff-card"
+            :style="{borderTopColor: `${borderColor(index)}`,marginRight: `${removeRightMargin(index)}`}"
             @mouseover="showCard(index)"
             @mouseout="closeCard"
           >
             <div class="card-inner-block">
-              <div class="stuff-card-avatar" :style="{backgroundImage: `url(${item.ImgUrl})`}"></div>
-              <div class="stuff-card-name">{{item.name}}</div>
+              <div
+                class="stuff-card-avatar"
+                :style="{backgroundImage: `url(${item.ImgUrl})`}"
+              />
+              <div class="stuff-card-name">
+                {{ item.name }}
+              </div>
             </div>
           </div>
         </div>
@@ -28,21 +42,27 @@
         >
           <div class="information-card-name">
             <span>姓名:</span>
-            {{cardInfo.name}}
+            {{ cardInfo.name }}
           </div>
           <div class="information-card-direction">
             <span>方向:</span>
-            {{cardInfo.goodAt}}
+            {{ cardInfo.goodAt }}
           </div>
           <div class="information-card-introduction">
             <span>介绍:</span>
-            {{cardInfo.description}}
+            {{ cardInfo.description }}
           </div>
         </div>
       </div>
-      <div class="scroll-bar" ref="scrollBar">
-        <div class="scroll-bar-button" :style="{left: `${leftDistance}px`}"></div>
-        <div class="scroll-bar-line"></div>
+      <div
+        ref="scrollBar"
+        class="scroll-bar"
+      >
+        <div
+          class="scroll-bar-button"
+          :style="{left: `${leftDistance}px`}"
+        />
+        <div class="scroll-bar-line" />
       </div>
     </div>
   </div>
@@ -557,6 +577,11 @@ export default {
       stuffInformationDisplay: []
     };
   },
+  mounted() {
+    const bodyWidth = document.body.clientWidth;
+    this.stuffInformationDisplay =
+      bodyWidth > 660 ? this.stuffInformation : this.stuffInformationPhone;
+  },
   methods: {
     showCard(index) {
       debounce(
@@ -593,11 +618,6 @@ export default {
         (leftDistance * (scrollBarWidth - SCROLL_BAR_BUTTON_WIDTH)) /
         (innerWidth - maxWidth);
     }
-  },
-  mounted() {
-    const bodyWidth = document.body.clientWidth;
-    this.stuffInformationDisplay =
-      bodyWidth > 660 ? this.stuffInformation : this.stuffInformationPhone;
   }
 };
 </script>

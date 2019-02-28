@@ -1,14 +1,21 @@
 <template>
   <div class="part1-container">
     <div class="top">
-      <div class="studio-icon"><img src="../assets/logo/qingyoulogo.svg" /></div>
-      <button @click="navToOauth">Oauth认证</button>
+      <div class="studio-icon">
+        <img src="../assets/logo/qingyoulogo.svg">
+      </div>
+      <button @click="navToOauth">
+        Oauth认证
+      </button>
     </div>
     <div class="part1">
       <div class="introduction">
         <div class="introduction-text">
-          <h1>用爱发电<br />创造可能</h1>
-          <br />
+          <h1>
+            用爱发电
+            <br>创造可能
+          </h1>
+          <br>
           <p>
             青柚工作室成立于 2017 年 10 月，现已有超过 30 位成员分别负责技术、设计、运营推广等工作。截止到现在，青柚工作室已经开发“南京邮电大学”、
             “校谈”等微信小程序。其中，“南邮小程序”现已有超过 5.5 万用户，日均活跃量超过 1 万 3 千人次。
@@ -18,12 +25,30 @@
       </div>
     </div>
     <div class="plane-container">
-      <div class="plane-first" :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"></div>
-      <div class="plane-second" :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"></div>
-      <div class="plane-third" :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"></div>
-      <div class="plane-first-opposite" :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"></div>
-      <div class="plane-second-opposite" :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"></div>
-      <div class="plane-third-opposite" :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"></div>
+      <div
+        class="plane-first"
+        :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"
+      />
+      <div
+        class="plane-second"
+        :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"
+      />
+      <div
+        class="plane-third"
+        :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"
+      />
+      <div
+        class="plane-first-opposite"
+        :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"
+      />
+      <div
+        class="plane-second-opposite"
+        :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"
+      />
+      <div
+        class="plane-third-opposite"
+        :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"
+      />
     </div>
   </div>
 </template>
@@ -37,15 +62,15 @@ export default {
       oppositePlaneDisplayStatus: false
     };
   },
-  methods: {
-    navToOauth() {
-      window.location.href = `https://qingyou.njupt.edu.cn/oauth`;
-    }
-  },
   mounted() {
     setInterval(() => {
       this.oppositePlaneDisplayStatus = !this.oppositePlaneDisplayStatus;
     }, 4500);
+  },
+  methods: {
+    navToOauth() {
+      window.location.href = `https://qingyou.njupt.edu.cn/oauth`;
+    }
   }
 };
 </script>
