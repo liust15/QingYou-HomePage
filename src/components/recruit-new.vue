@@ -1,87 +1,52 @@
 <template>
   <div class="part4">
     <div class="part-title-container">
-      <div class="part-title-img-container" />
-      <div class="title-bubble bubble1" />
-      <div class="title-bubble bubble2" />
+      <div class="part-title-img-container"/>
+      <div class="title-bubble bubble1"/>
+      <div class="title-bubble bubble2"/>
       <span class="title-text">我们欢迎</span>
     </div>
     <div class="part-content">
       <div class="card-container">
-        <div
-          v-for="(item) in cardInfo.slice(0,2)"
-          :key="item.id"
-          class="content-card"
-        >
-          <div class="card-card card1" />
-          <div class="card-card card2" />
+        <div v-for="(item) in cardInfo.slice(0,2)" :key="item.id" class="content-card">
+          <div class="card-card card1"/>
+          <div class="card-card card2"/>
           <div class="card-content">
-            <div class="content-title">
-              {{ item.title }}
-            </div>
-            <div class="content-text">
-              {{ item.content }}
-            </div>
+            <div class="content-title">{{ item.title }}</div>
+            <div class="content-text">{{ item.content }}</div>
           </div>
         </div>
       </div>
       <div class="card-container">
-        <div
-          v-for="(item) in cardInfo.slice(2,4)"
-          :key="item.id"
-          class="content-card"
-        >
-          <div class="card-card card1" />
-          <div class="card-card card2" />
+        <div v-for="(item) in cardInfo.slice(2,4)" :key="item.id" class="content-card">
+          <div class="card-card card1"/>
+          <div class="card-card card2"/>
           <div class="card-content">
-            <div class="content-title">
-              {{ item.title }}
-            </div>
-            <div class="content-text">
-              {{ item.content }}
-            </div>
+            <div class="content-title">{{ item.title }}</div>
+            <div class="content-text">{{ item.content }}</div>
           </div>
         </div>
       </div>
     </div>
-    <img
-      class="part-image"
-      src="../assets/Illustrations/design_process_iqqg.svg"
-    >
+    <img class="part-image" src="../assets/Illustrations/design_process_iqqg.svg">
     <div class="part-content">
       <div class="card-container">
-        <div
-          v-for="(item) in cardInfo.slice(4,6)"
-          :key="item.id"
-          class="content-card"
-        >
-          <div class="card-card card1" />
-          <div class="card-card card2" />
+        <div v-for="(item) in cardInfo.slice(4,6)" :key="item.id" class="content-card">
+          <div class="card-card card1"/>
+          <div class="card-card card2"/>
           <div class="card-content">
-            <div class="content-title">
-              {{ item.title }}
-            </div>
-            <div class="content-text">
-              {{ item.content }}
-            </div>
+            <div class="content-title">{{ item.title }}</div>
+            <div class="content-text">{{ item.content }}</div>
           </div>
         </div>
       </div>
       <div class="card-container">
-        <div
-          v-for="(item) in cardInfo.slice(6)"
-          :key="item.id"
-          class="content-card"
-        >
-          <div class="card-card card1" />
-          <div class="card-card card2" />
+        <div v-for="(item) in cardInfo.slice(6)" :key="item.id" class="content-card">
+          <div class="card-card card1"/>
+          <div class="card-card card2"/>
           <div class="card-content">
-            <div class="content-title">
-              {{ item.title }}
-            </div>
-            <div class="content-text">
-              {{ item.content }}
-            </div>
+            <div class="content-title">{{ item.title }}</div>
+            <div class="content-text">{{ item.content }}</div>
           </div>
         </div>
       </div>
