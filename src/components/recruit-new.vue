@@ -8,7 +8,10 @@
     </div>
     <div class="part-content">
       <div class="card-container">
-        <div v-for="(item) in cardInfo.slice(0,2)" :key="item.id" class="content-card">
+        <div 
+          v-for="(item) in cardInfo.slice(0,2)" 
+          :key="item.id" 
+          class="content-card">
           <div class="card-card card1"/>
           <div class="card-card card2"/>
           <div class="card-content">
@@ -18,7 +21,10 @@
         </div>
       </div>
       <div class="card-container">
-        <div v-for="(item) in cardInfo.slice(2,4)" :key="item.id" class="content-card">
+        <div 
+          v-for="(item) in cardInfo.slice(2,4)" 
+          :key="item.id" 
+          class="content-card">
           <div class="card-card card1"/>
           <div class="card-card card2"/>
           <div class="card-content">
@@ -28,10 +34,15 @@
         </div>
       </div>
     </div>
-    <img class="part-image" src="../assets/Illustrations/design_process_iqqg.svg">
+    <img 
+      class="part-image" 
+      src="../assets/Illustrations/design_process_iqqg.svg">
     <div class="part-content">
       <div class="card-container">
-        <div v-for="(item) in cardInfo.slice(4,6)" :key="item.id" class="content-card">
+        <div 
+          v-for="(item) in cardInfo.slice(4,6)" 
+          :key="item.id" 
+          class="content-card">
           <div class="card-card card1"/>
           <div class="card-card card2"/>
           <div class="card-content">
@@ -41,7 +52,10 @@
         </div>
       </div>
       <div class="card-container">
-        <div v-for="(item) in cardInfo.slice(6)" :key="item.id" class="content-card">
+        <div 
+          v-for="(item) in cardInfo.slice(6)" 
+          :key="item.id" 
+          class="content-card">
           <div class="card-card card1"/>
           <div class="card-card card2"/>
           <div class="card-content">
