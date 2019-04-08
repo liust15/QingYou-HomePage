@@ -106,6 +106,12 @@ import avatar32 from "../assets/stuff-avatar/zyj.jpg";
 import avatar33 from "../assets/stuff-avatar/lyf.jpg";
 import avatar34 from "../assets/stuff-avatar/zx.jpg";
 import avatar35 from "../assets/stuff-avatar/xyd.jpg";
+import avatar36 from "../assets/stuff-avatar/cks.jpg";
+import avatar37 from "../assets/stuff-avatar/gbh.jpg";
+import avatar38 from "../assets/stuff-avatar/llr.jpg";
+import avatar39 from "../assets/stuff-avatar/hyl.jpg";
+import avatar40 from "../assets/stuff-avatar/zc.jpg";
+import avatar41 from "../assets/stuff-avatar/czf.jpg";
 import debounce from "../utils/debounce.js";
 export default {
   name: `Stuff`,
@@ -338,6 +344,42 @@ export default {
           goodAt: "后端",
           ImgUrl: avatar32,
           description: "张佑杰，男，1999年生，现年18岁，马上19岁，明年20岁。"
+        },
+        {
+          name: "陈凯森",
+          goodAt: "前端",
+          ImgUrl: avatar36,
+          description: "JavaScript天下第一，不接受反驳 (逃"
+        },
+        {
+          name: "顾博翰",
+          goodAt: "后端",
+          ImgUrl :avatar37,
+          description :"黑夜问白天，拼命的往前，听不到救援"
+        },
+        {
+          name: "李林睿",
+          goodAt: "后端",
+          ImgUrl: avatar38,
+          description: "小白，我们什么时候才能快乐呢"
+        },
+        {
+          name: "黄艺玲",
+          goodAt: "后端",
+          ImgUrl: avatar39,
+          description: "既好水墨青花 何惧刹那芳华"
+        },
+        {
+          name: "周灿",
+          goodAt: "画师",
+          ImgUrl: avatar40,
+          description: "所有命运赠送的礼物，早已在暗中标好了价格。"
+        },
+        {
+          name: "陈志帆",
+          goodAt: "前端",
+          ImgUrl: avatar41,
+          description: "Consider everything deeply but still remain fearless."
         }
       ],
       borderColorArray: [`#22b574`, `#9dd647`, `#d9db61`],
@@ -424,7 +466,7 @@ export default {
       overflow-y: hidden
       @media(min-width: $phone)
         max-width: 53.875rem
-        max-height: 43rem
+        // max-height: 43rem
       .detail-information-card
         position: absolute
         bottom: 15%
@@ -450,7 +492,7 @@ export default {
         width: 1597px
         overflow-x: scroll
         overflow-y: hidden
-        max-height: 42.75rem
+        // max-height: 42.75rem
         display: flex
         flex-wrap: wrap
         @media(max-width: $phone)
