@@ -2,21 +2,17 @@
   <div class="part2">
     <div class="part2-content-container">
       <div class="part2-container-title">
-        <div class="title-bubble bubble1" />
-        <div class="title-bubble bubble2" />
-        <div class="title-font">
-          我们有多强
-        </div>
+        <div class="title-bubble bubble1"/>
+        <div class="title-bubble bubble2"/>
+        <div class="title-font">我们有多强</div>
       </div>
-      <div
-        ref="stuffContainer"
-        class="stuff-container"
-        @scroll="scrollLeft"
-      >
-        <div
-          ref="stuffAvatar"
-          class="stuff-avatar"
-        >
+      <div 
+        ref="stuffContainer" 
+        class="stuff-container" 
+        @scroll="scrollLeft">
+        <div 
+          ref="stuffAvatar" 
+          class="stuff-avatar">
           <div
             v-for="(item,index) in stuffInformation"
             :key="index"
@@ -26,13 +22,10 @@
             @mouseout="closeCard"
           >
             <div class="card-inner-block">
-              <div
-                :style="{backgroundImage: `url(${item.ImgUrl})`}"
-                class="stuff-card-avatar"
-              />
-              <div class="stuff-card-name">
-                {{ item.name }}
-              </div>
+              <div 
+                :style="{backgroundImage: `url(${item.ImgUrl})`}" 
+                class="stuff-card-avatar"/>
+              <div class="stuff-card-name">{{ item.name }}</div>
             </div>
           </div>
         </div>
@@ -54,15 +47,13 @@
           </div>
         </div>
       </div>
-      <div
-        ref="scrollBar"
-        class="scroll-bar"
-      >
-        <div
-          :style="{left: `${leftDistance}px`}"
-          class="scroll-bar-button"
-        />
-        <div class="scroll-bar-line" />
+      <div 
+        ref="scrollBar" 
+        class="scroll-bar">
+        <div 
+          :style="{left: `${leftDistance}px`}" 
+          class="scroll-bar-button"/>
+        <div class="scroll-bar-line"/>
       </div>
     </div>
   </div>
@@ -328,6 +319,42 @@ export default {
             "万分感谢青柚工作室收容very vegetable的我。希望这个世界因为我而变得好一点，在那之前先努力自我救赎吧。"
         },
         {
+          name: "顾博翰",
+          goodAt: "后端",
+          ImgUrl: avatar37,
+          description: "黑夜问白天，拼命的往前，听不到救援"
+        },
+        {
+          name: "黄艺玲",
+          goodAt: "后端",
+          ImgUrl: avatar39,
+          description: "既好水墨青花 何惧刹那芳华"
+        },
+        {
+          name: "陈凯森",
+          goodAt: "前端",
+          ImgUrl: avatar36,
+          description: "JavaScript天下第一，不接受反驳 (逃"
+        },
+        {
+          name: "周灿",
+          goodAt: "画师",
+          ImgUrl: avatar40,
+          description: "所有命运赠送的礼物，早已在暗中标好了价格。"
+        },
+        {
+          name: "李林睿",
+          goodAt: "后端",
+          ImgUrl: avatar38,
+          description: "小白，我们什么时候才能快乐呢"
+        },
+        {
+          name: "陈志帆",
+          goodAt: "前端",
+          ImgUrl: avatar41,
+          description: "Consider everything deeply but still remain fearless."
+        },
+        {
           name: "周捷",
           goodAt: "安全",
           ImgUrl: avatar11,
@@ -344,50 +371,13 @@ export default {
           goodAt: "后端",
           ImgUrl: avatar32,
           description: "张佑杰，男，1999年生，现年18岁，马上19岁，明年20岁。"
-        },
-        {
-          name: "陈凯森",
-          goodAt: "前端",
-          ImgUrl: avatar36,
-          description: "JavaScript天下第一，不接受反驳 (逃"
-        },
-        {
-          name: "顾博翰",
-          goodAt: "后端",
-          ImgUrl :avatar37,
-          description :"黑夜问白天，拼命的往前，听不到救援"
-        },
-        {
-          name: "李林睿",
-          goodAt: "后端",
-          ImgUrl: avatar38,
-          description: "小白，我们什么时候才能快乐呢"
-        },
-        {
-          name: "黄艺玲",
-          goodAt: "后端",
-          ImgUrl: avatar39,
-          description: "既好水墨青花 何惧刹那芳华"
-        },
-        {
-          name: "周灿",
-          goodAt: "画师",
-          ImgUrl: avatar40,
-          description: "所有命运赠送的礼物，早已在暗中标好了价格。"
-        },
-        {
-          name: "陈志帆",
-          goodAt: "前端",
-          ImgUrl: avatar41,
-          description: "Consider everything deeply but still remain fearless."
         }
       ],
       borderColorArray: [`#22b574`, `#9dd647`, `#d9db61`],
       cardInfo: {},
       cardShowStatus: false,
       disappearStatus: false,
-      leftDistance: 0,
-      
+      leftDistance: 0
     };
   },
   methods: {
