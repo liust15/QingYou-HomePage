@@ -26,28 +26,28 @@
     </div>
     <div class="plane-container">
       <div
+        :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"
         class="plane-first"
-        :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"
       />
       <div
+        :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"
         class="plane-second"
-        :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"
       />
       <div
+        :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"
         class="plane-third"
-        :style="{display:oppositePlaneDisplayStatus ? 'none' : 'block'}"
       />
       <div
+        :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"
         class="plane-first-opposite"
-        :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"
       />
       <div
+        :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"
         class="plane-second-opposite"
-        :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"
       />
       <div
-        class="plane-third-opposite"
         :style="{display:oppositePlaneDisplayStatus ? 'block' : 'none'}"
+        class="plane-third-opposite"
       />
     </div>
   </div>

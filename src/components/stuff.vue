@@ -18,17 +18,17 @@
           class="stuff-avatar"
         >
           <div
-            v-for="(item,index) in stuffInformationDisplay"
+            v-for="(item,index) in stuffInformation"
             :key="index"
-            class="stuff-card"
             :style="{borderTopColor: `${borderColor(index)}`,marginRight: `${removeRightMargin(index)}`}"
+            class="stuff-card"
             @mouseover="showCard(index)"
             @mouseout="closeCard"
           >
             <div class="card-inner-block">
               <div
-                class="stuff-card-avatar"
                 :style="{backgroundImage: `url(${item.ImgUrl})`}"
+                class="stuff-card-avatar"
               />
               <div class="stuff-card-name">
                 {{ item.name }}
@@ -59,8 +59,8 @@
         class="scroll-bar"
       >
         <div
-          class="scroll-bar-button"
           :style="{left: `${leftDistance}px`}"
+          class="scroll-bar-button"
         />
         <div class="scroll-bar-line" />
       </div>
@@ -345,248 +345,14 @@ export default {
       cardShowStatus: false,
       disappearStatus: false,
       leftDistance: 0,
-      stuffInformationPhone: [
-        {
-          name: "顾亦然",
-          goodAt:
-            "教授，硕士生导师，信息化建设与管理办公室主任，青柚工作室指导老师",
-          ImgUrl: avatar0,
-          description:
-            "复杂系统建模、分析与优化，复杂系统中人类行为动力学研究，计算机控制理论及嵌入式系统在复杂系统中的应用。"
-        },
-        {
-          name: "朱晓峰",
-          goodAt: "后端、数据分析",
-          ImgUrl: avatar4,
-          description: "世间草木皆美，人不是。中药很苦，你也是。"
-        },
-        {
-          name: "宁泓皓",
-          goodAt: "前端",
-          ImgUrl: avatar13,
-          description: "对不起，02是我老婆…"
-        },
-        {
-          name: "杨丛铭",
-          goodAt: "UI、前端",
-          ImgUrl: avatar17,
-          description: "在理性的代码和感性的设计中间找到平衡。"
-        },
-        {
-          name: "欧阳宇翔",
-          goodAt: "安卓",
-          ImgUrl: avatar21,
-          description: "本工作室最菜，广告位招租，头像我老婆。"
-        },
-        {
-          name: "鲍可",
-          goodAt: "前端",
-          ImgUrl: avatar25,
-          description:
-            "南京邮电大学17级计算机学院信息安全学生,主要方向是前端,不断学习中～"
-        },
-        {
-          name: "吴爱天",
-          goodAt: "后端",
-          ImgUrl: avatar9,
-          description: "切图，写写业务，啥杂都打打的万金油。。。。。"
-        },
-        {
-          name: "梁天琦",
-          goodAt: "前端",
-          ImgUrl: avatar26,
-          description: "JavaScript是世界上最混乱邪恶的语言"
-        },
-        {
-          name: "周捷",
-          goodAt: "安全",
-          ImgUrl: avatar11,
-          description: "妈耶，这个站怎么日?"
-        },
-        {
-          name: "严宇倞",
-          goodAt: "Java，Web，Microservices",
-          ImgUrl: avatar1,
-          description:
-            "中年程序员，低配全栈，想跨过山和大海，也想穿过人山人海。"
-        },
-        {
-          name: "张楚月",
-          goodAt: "UI",
-          ImgUrl: avatar5,
-          description: "The unity of inner knowledge and action —"
-        },
-        {
-          name: "唐子惠",
-          goodAt: "UI、画师",
-          ImgUrl: avatar6,
-          description: "专注做个萌萌哒的吉祥物（求约稿啊！）"
-        },
-        {
-          name: "安泓烨",
-          goodAt: "后端，其他",
-          ImgUrl: avatar19,
-          description: "业余写代码，擅长划水喊6，至今单身狗一枚。"
-        },
-        {
-          name: "史朝夕",
-          goodAt: "运维",
-          ImgUrl: avatar18,
-          description:
-            "负责工作室的运维工作，以操作Linux操作系统为主，对相关服务器进行基本环境的搭建，对服务的运行状况进行监控和管理，优化相关服务的效率。\n其实也是个拉拉人("
-        },
-        {
-          name: "李赫",
-          goodAt: "UI",
-          ImgUrl: avatar10,
-          description: "电光微院大四学生，负责小程序部分UI设计。"
-        },
-        {
-          name: "朱逸尘",
-          goodAt: "后端",
-          ImgUrl: avatar28,
-          description: "爱生活的我随手一打就是漂亮的十五字。"
-        },
-        {
-          name: "肖雨点",
-          goodAt: "画师/UI",
-          ImgUrl: avatar35,
-          description: "没有才华"
-        },
-        {
-          name: "李懿峰",
-          goodAt: "运营",
-          ImgUrl: avatar33,
-          description:
-            "万分感谢青柚工作室收容very vegetable的我。希望这个世界因为我而变得好一点，在那之前先努力自我救赎吧。"
-        },
-        {
-          name: "顾怡",
-          goodAt: "房主",
-          ImgUrl: avatar2,
-          description: "青柚管理员，以前是前端，现在是房主。"
-        },
-        {
-          name: "彭泽凡",
-          goodAt: "前端",
-          ImgUrl: avatar12,
-          description:
-            "反正主页一般没人看，我就随便写写是不是也没人能发现，顺便，千万不要加江同学微信！切记。"
-        },
-        {
-          name: "顾刘健",
-          goodAt: "运维",
-          ImgUrl: avatar7,
-          description: "大概专业打杂100年。"
-        },
-        {
-          name: "邹昊",
-          goodAt: "前端",
-          ImgUrl: avatar16,
-          description:
-            "邹缨齐紫，昊天罔极。我只想说为什么面向对象的程序员没有对象啊！人生真是寂寞如雪唉，恋爱是不可能的，还是好好学前端吧2333。"
-        },
-        {
-          name: "赵恒远",
-          goodAt: "前端",
-          ImgUrl: avatar23,
-          description: "爱好学习，喜欢熬夜，喜欢新奇的事情，喜欢湖人队和电影。"
-        },
-        {
-          name: "郑致远",
-          goodAt: "后端",
-          ImgUrl: avatar27,
-          description: "普通话二甲选手。"
-        },
-        {
-          name: "刘源",
-          goodAt: "后端",
-          ImgUrl: avatar22,
-          description: "大三计软件院咸鱼，赵明睿大佬的小弟"
-        },
-        {
-          name: "陈康扬",
-          goodAt: "前端",
-          ImgUrl: avatar30,
-          description:
-            "参与本科生小程序前端开发，希望认识更多有趣的灵魂，大家都加油！"
-        },
-        {
-          name: "周馨",
-          goodAt: "运营",
-          ImgUrl: avatar34,
-          description: "等待就是浪费青春"
-        },
-        {
-          name: "江子玮",
-          goodAt: "前端",
-          ImgUrl: avatar3,
-          description: "骚还是我骚啊~"
-        },
-        {
-          name: "谭康威",
-          goodAt: "UI、运营、其他",
-          ImgUrl: avatar14,
-          description:
-            "南邮装修专业一个画UI的运营，承包青柚各种宣传推广和各种大活装修业务。"
-        },
-        {
-          name: "赵明睿",
-          goodAt: "后端",
-          ImgUrl: avatar15,
-          description:
-            "基本上所有精力都放在了后端学习，日常有点颓废，有点懒，觉得自己什么都不会，想要健身的路上。然后单身。"
-        },
-        {
-          name: "林禹辰",
-          goodAt: "后端",
-          ImgUrl: avatar20,
-          description: "B160110班长，爱生活，爱运动，爱挑战，爱做饭，爱编程！！"
-        },
-        {
-          name: "黄兴源",
-          goodAt: "前端",
-          ImgUrl: avatar24,
-          description: "在混乱邪恶的世界里爱我所爱,行我所行。"
-        },
-        {
-          name: "柏超宇",
-          goodAt: "HR",
-          ImgUrl: avatar31,
-          description: "狒狒大渣男，校草快脱单"
-        },
-        {
-          name: "谭嘉晖",
-          goodAt: "前端",
-          ImgUrl: avatar29,
-          description: "会点js，立志成为一名成功的切图仔。"
-        },
-        {
-          name: "王悉宇",
-          goodAt: "后端，其他",
-          ImgUrl: avatar8,
-          description: "划水打杂。假装自己是后端，其实是咸鱼一条。"
-        },
-        {
-          name: "张佑杰",
-          goodAt: "后端",
-          ImgUrl: avatar32,
-          description: "张佑杰，男，1999年生，现年18岁，马上19岁，明年20岁。"
-        }
-      ],
-      stuffInformationDisplay: []
+      
     };
-  },
-  mounted() {
-    const bodyWidth = document.body.clientWidth;
-    this.stuffInformationDisplay =
-      bodyWidth > 660 ? this.stuffInformation : this.stuffInformationPhone;
   },
   methods: {
     showCard(index) {
       debounce(
         (() => {
-          this.cardInfo = this.stuffInformationDisplay[index];
+          this.cardInfo = this.stuffInformation[index];
           this.cardShowStatus = true;
           // setTimeout(() => {
           //   this.closeCard();
@@ -685,7 +451,11 @@ export default {
         overflow-x: scroll
         overflow-y: hidden
         max-height: 42.75rem
-        display: inline-block
+        display: flex
+        flex-wrap: wrap
+        @media(max-width: $phone)
+          flex-direction: column
+          height: 608px
         .stuff-card
           cursor: pointer
           margin-left: 0.1rem
